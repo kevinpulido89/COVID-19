@@ -29,6 +29,7 @@ print(LAT)
 axes = LAT.plot.bar(rot=90, subplots=True)
 plt.tight_layout()
 plt.show()
+plt.close()
 
 COL = df[df['countriesAndTerritories']=='Colombia']
 
@@ -53,21 +54,27 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     x_new = np.linspace(0, N, 100)
     y_new = model(x_new)
 
-    plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
+    # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
+    plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
+    plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
+    plt.plot(N,906,'.', color = 'r', marker = 'x', label='Nuevo Caso')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
-    ax.set_facecolor((0.898, 0.898, 0.898))
+    ax.set_facecolor((0.892, 0.892, 0.892))
     fig = plt.gcf()
     plt.xlabel('Días')
     plt.ylabel('Cantidad de casos')
-    plt.legend('Casos en Colombia','modelo')
+    plt.legend()
+    plt.tight_layout()
     plt.show()
-    # plt.close()
+    plt.close()
 ##################---> FIN FUNCIONES <---########################
 
 plt.plot(cases_counter(COL))
 plt.xlabel("Días")
+plt.ylabel("Casos")
 plt.show()
+plt.close()
 
 acc = acc_list(cases_counter(COL))
 yy = [i for i in range(len(acc))]
@@ -78,15 +85,16 @@ for i in range(len(acc)-window_size):
     K = np.array(acc[i:i+window_size+1])
     acc_col = acc_col.append(pd.DataFrame(K).T)
 
-# Here we use a polynomial of the 6th order
+# Here we use a polynomial of the 5th order
 order = 5
 f = np.polyfit(yy, acc, order)
 # print('f: ',f)
 p = np.poly1d(f)
 
-print('El modelo ajustado es: {}'.format(p))
+print('\n')
+print('El modelo ajustado de {0}° es:\n {1} \n'.format(order, p))
 
 PlotPolly(p, yy, acc, len(acc))
 
 # Prediccion para el siguente día
-print(f'Para el día {len(acc)} se proyectan {p(len(acc))} casos')
+print(f'Para el dia {len(acc)} se proyectan {int(p(len(acc)))} casos')
