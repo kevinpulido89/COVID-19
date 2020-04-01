@@ -1,4 +1,4 @@
-#COVID-19
+# COVID-19
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -57,7 +57,7 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
-    plt.plot(N,906,'.', color = 'r', marker = 'x', label='Nuevo Caso')
+    plt.plot(N, 1065, '.', color = 'r', marker = 'x', label='Nuevo Caso')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
@@ -80,7 +80,7 @@ acc = acc_list(cases_counter(COL))
 yy = [i for i in range(len(acc))]
 
 acc_col = pd.DataFrame()
-window_size=3
+window_size = 3
 for i in range(len(acc)-window_size):
     K = np.array(acc[i:i+window_size+1])
     acc_col = acc_col.append(pd.DataFrame(K).T)
