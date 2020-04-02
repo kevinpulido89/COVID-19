@@ -54,10 +54,13 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     x_new = np.linspace(0, N, 100)
     y_new = model(x_new)
 
+    New_case = model(N)
+
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
-    plt.plot(N, 1065, '.', color = 'r', marker = 'x', label='Nuevo Caso')
+    plt.plot(N, int(New_case), color = 'r', marker = 'x', label='#Casos Esperado')
+    plt.plot(N, 1161, color = 'g', marker = 'D', label='#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
