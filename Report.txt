@@ -1,0 +1,32 @@
+[Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
+                    Total Cases  Total Deaths
+Country
+Brazil                   7910.0         299.0
+Chile                    3404.0          18.0
+Ecuador                  3163.0         120.0
+Panama                   1475.0          37.0
+Peru                     1414.0          55.0
+Dominican_Republic       1380.0          60.0
+Mexico                   1378.0          37.0
+Colombia                 1161.0          19.0
+Argentina                1133.0          34.0
+Costa_Rica                396.0           2.0
+Uruguay                   369.0           4.0
+Cuba                      233.0           6.0
+Honduras                  222.0          15.0
+Venezuela                 144.0           3.0
+Bolivia                   132.0           9.0
+Paraguay                   77.0           3.0
+Guatemala                  47.0           1.0
+El_Salvador                46.0           2.0
+Guyana                     19.0           4.0
+Haiti                      18.0           0.0
+Suriname                   10.0           0.0
+Nicaragua                   5.0           1.0
+
+El modelo ajustado de 5� es:
+            5           4          3         2
+0.0008758 x - 0.04666 x + 0.9011 x - 5.194 x + 16.9 x - 4.291
+
+Para el dia 24 se proyectan 1358 casos
+[Finished in 235.012s]
