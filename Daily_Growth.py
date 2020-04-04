@@ -56,6 +56,9 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
 
     New_case = model(N)
 
+    # Prediccion para el siguente día
+    print(f'Para el dia {len(dependent_variabble)} se proyectan {int(p(len(dependent_variabble)))} casos')
+
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
@@ -98,6 +101,3 @@ print('\n')
 print('El modelo ajustado de {0}° es:\n {1} \n'.format(order, p))
 
 PlotPolly(p, yy, acc, len(acc))
-
-# Prediccion para el siguente día
-print(f'Para el dia {len(acc)} se proyectan {int(p(len(acc)))} casos')
