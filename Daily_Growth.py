@@ -14,13 +14,12 @@ paises_suramericanos = ['Mexico', 'Guatemala', 'Honduras', 'El_Salvador', 'Nicar
                          'Suriname','Haiti']
 
 for p in paises_suramericanos:
-    tmp = df[df['countriesAndTerritories']==p]['cases'].sum()
-    tmp2 = df[df['countriesAndTerritories']==p]['deaths'].sum()
+    tmp = df[df['countriesAndTerritories'] == p]['cases'].sum()
+    tmp2 = df[df['countriesAndTerritories'] == p]['deaths'].sum()
     LAT = LAT.append({'Country' : p ,
                     'Total Cases' : int(tmp),
                     'Total Deaths': int(tmp2)},
-
-                   ignore_index=True)
+                   ignore_index = True)
 
 LAT.sort_values(by='Total Cases', ascending=False, axis=0, inplace=True)
 LAT.set_index('Country', inplace=True)
@@ -31,7 +30,7 @@ plt.tight_layout()
 plt.show()
 plt.close()
 
-COL = df[df['countriesAndTerritories']=='Colombia']
+COL = df[df['countriesAndTerritories'] == 'Colombia']
 
 def cases_counter(df):
     cs = list(df['cases'])[::-1]
@@ -62,8 +61,8 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
-    plt.plot(N, int(New_case), color = 'r', marker = 'x', label='#Casos Esperado')
-    plt.plot(N, 1406, color = 'g', marker = 'D', label='#Casos Reales')
+    plt.plot(N, int(New_case), color = 'r', marker = 'x', label = '#Casos Esperado')
+    plt.plot(N, 1579, color = 'g', marker = 'D', label = '#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
@@ -92,7 +91,7 @@ for i in range(len(acc)-window_size):
     acc_col = acc_col.append(pd.DataFrame(K).T)
 
 # Here we use a polynomial of the 5th order
-order = 5
+order = 6
 f = np.polyfit(yy, acc, order)
 # print('f: ',f)
 p = np.poly1d(f)
