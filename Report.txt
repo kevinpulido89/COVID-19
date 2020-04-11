@@ -1,32 +1,32 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
                     Total Cases  Total Deaths
 Country
-Brazil                  12056.0         553.0
-Chile                    4815.0          37.0
-Ecuador                  3747.0         191.0
-Peru                     2561.0          92.0
-Mexico                   2439.0         125.0
-Panama                   2100.0          55.0
-Dominican_Republic       1828.0          86.0
-Argentina                1628.0          53.0
-Colombia                 1579.0          46.0
-Costa_Rica                467.0           2.0
-Uruguay                   415.0           6.0
-Cuba                      350.0           9.0
-Honduras                  305.0          22.0
-Bolivia                   194.0          14.0
-Venezuela                 159.0           5.0
-Paraguay                  113.0           5.0
-El_Salvador                78.0           4.0
-Guatemala                  74.0           3.0
-Guyana                     31.0           5.0
-Haiti                      24.0           1.0
+Brazil                  17857.0         941.0
+Chile                    5972.0          57.0
+Peru                     5256.0         138.0
+Ecuador                  4965.0         272.0
+Mexico                   3441.0         194.0
+Panama                   2752.0          66.0
+Dominican_Republic       2349.0         118.0
+Colombia                 2223.0          69.0
+Argentina                1894.0          79.0
+Costa_Rica                539.0           3.0
+Cuba                      515.0          15.0
+Uruguay                   473.0           7.0
+Honduras                  382.0          23.0
+Bolivia                   268.0          19.0
+Venezuela                 171.0           9.0
+Paraguay                  129.0           6.0
+Guatemala                 126.0           3.0
+El_Salvador               117.0           6.0
+Guyana                     37.0           6.0
+Haiti                      30.0           2.0
 Suriname                   10.0           1.0
 Nicaragua                   6.0           1.0
 
 El modelo ajustado de 5� es:
-             5           4          3         2
--0.0004385 x + 0.02641 x - 0.5174 x + 6.059 x - 14.76 x + 10.81
+            5           4          3         2
+0.0003107 x - 0.02136 x + 0.5456 x - 3.613 x + 16.61 x - 7.17
 
-Para el dia 28 se proyectan 1679 casos
-[Finished in 30.883s]
+Para el dia 31 se proyectan 2457 casos
+[Finished in 74.708s]
