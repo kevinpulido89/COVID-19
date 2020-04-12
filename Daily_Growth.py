@@ -5,13 +5,18 @@ import matplotlib.pyplot as plt
 
 df = pd.read_excel('https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide.xlsx')
 
+# df['Total'] = df['countryterritoryCode']
+
+# df.sort_values(by='Total Cases', ascending=False, axis=0, inplace=True)
+# TOP_10 = df.head(10)
+
 LAT = pd.DataFrame()
 
 paises_suramericanos = ['Mexico', 'Guatemala', 'Honduras', 'El_Salvador', 'Nicaragua',
                         'Costa_Rica', 'Panama', 'Colombia', 'Venezuela', 'Ecuador',
                         'Peru', 'Bolivia', 'Chile', 'Paraguay','Brazil',
                         'Argentina', 'Uruguay', 'Cuba', 'Dominican_Republic', 'Guyana',
-                         'Suriname','Haiti']
+                        'Suriname','Haiti']
 
 for p in paises_suramericanos:
     tmp = df[df['countriesAndTerritories'] == p]['cases'].sum()
@@ -62,7 +67,7 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
     plt.plot(N, int(New_case), color = 'r', marker = 'x', label = '#Casos Esperado')
-    plt.plot(N, 2473, color = 'g', marker = 'D', label = '#Casos Reales')
+    plt.plot(N, 2709, color = 'g', marker = 'D', label = '#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
@@ -78,6 +83,8 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
 plt.plot(cases_counter(COL))
 plt.xlabel("Días")
 plt.ylabel("Casos")
+plt.title('Aumento de casos diarios. Valor absoluto')
+plt.tight_layout()
 plt.show()
 plt.close()
 
