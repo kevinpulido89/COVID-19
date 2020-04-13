@@ -2,13 +2,30 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import date
+
+print(f'Today is {date.today()}.')
 
 df = pd.read_excel('https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide.xlsx')
 
-# df['Total'] = df['countryterritoryCode']
+TC = pd.DataFrame(columns=['Country', 'Total Cases', 'Total Deaths'])
+pays = list(df['countriesAndTerritories'].unique())
 
-# df.sort_values(by='Total Cases', ascending=False, axis=0, inplace=True)
-# TOP_10 = df.head(10)
+for p in pays:
+    tmp = df[df['countriesAndTerritories'] == p]['cases'].sum()
+    tmp2 = df[df['countriesAndTerritories'] == p]['deaths'].sum()
+    TC = TC.append({'Country': p,
+                    'Total Cases': int(tmp),
+                    'Total Deaths': int(tmp2)},
+                   ignore_index=True)
+
+TC.sort_values(by='Total Cases', ascending=False, axis=0, inplace=True)
+TOP10 = TC.head(10)
+TOP10.set_index('Country', inplace=True)
+axesA = TOP10.plot.bar(rot=90, subplots=True)
+plt.tight_layout()
+# axesA[1].legend(loc=1)
+plt.show()
 
 LAT = pd.DataFrame()
 
@@ -21,10 +38,10 @@ paises_suramericanos = ['Mexico', 'Guatemala', 'Honduras', 'El_Salvador', 'Nicar
 for p in paises_suramericanos:
     tmp = df[df['countriesAndTerritories'] == p]['cases'].sum()
     tmp2 = df[df['countriesAndTerritories'] == p]['deaths'].sum()
-    LAT = LAT.append({'Country' : p ,
-                    'Total Cases' : int(tmp),
-                    'Total Deaths': int(tmp2)},
-                   ignore_index = True)
+    LAT = LAT.append({'Country': p,
+                      'Total Cases': int(tmp),
+                      'Total Deaths': int(tmp2)},
+                     ignore_index=True)
 
 LAT.sort_values(by='Total Cases', ascending=False, axis=0, inplace=True)
 LAT.set_index('Country', inplace=True)
@@ -46,7 +63,7 @@ def acc_list(old):
     new = list()
     acc = 0
     for i in old:
-        acc +=i
+        acc += i
         new.append(acc)
     return new
 
