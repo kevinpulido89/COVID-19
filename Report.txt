@@ -1,4 +1,5 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
+Today is 2020-04-13.
                     Total Cases  Total Deaths
 Country
 Brazil                  22169.0        1223.0
@@ -29,4 +30,4 @@ El modelo ajustado de 5� es:
 -1.146e-05 x + 0.002361 x - 0.06415 x + 2.807 x - 7.633 x + 9.645
 
 Para el dia 34 se proyectan 3108 casos
-[Finished in 51.403s]
+[Finished in 9.041s]
