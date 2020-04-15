@@ -1,33 +1,33 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
-Today is 2020-04-13.
+Today is 14/04/2020.
+
                     Total Cases  Total Deaths
 Country
-Brazil                  22169.0        1223.0
+Brazil                  23430.0        1328.0
+Ecuador                  7529.0         355.0
+Chile                    7525.0          82.0
 Peru                     7519.0         193.0
-Ecuador                  7466.0         333.0
-Chile                    7213.0          80.0
-Mexico                   4661.0         296.0
-Panama                   3400.0          87.0
-Dominican_Republic       2967.0         173.0
-Colombia                 2776.0         109.0
-Argentina                2208.0          95.0
-Cuba                      669.0          18.0
-Costa_Rica                595.0           3.0
-Uruguay                   512.0           8.0
-Honduras                  397.0          25.0
-Bolivia                   330.0          27.0
-Venezuela                 181.0           9.0
-Guatemala                 156.0           5.0
-Paraguay                  147.0           6.0
-El_Salvador               125.0           6.0
-Guyana                     45.0           6.0
-Haiti                      33.0           3.0
-Nicaragua                  11.0           1.0
+Mexico                   5014.0         332.0
+Panama                   3472.0          94.0
+Dominican_Republic       3167.0         177.0
+Colombia                 2852.0         112.0
+Argentina                2272.0          98.0
+Cuba                      726.0          21.0
+Costa_Rica                612.0           3.0
+Uruguay                   521.0           8.0
+Honduras                  407.0          26.0
+Bolivia                   354.0          28.0
+Venezuela                 189.0           9.0
+Guatemala                 167.0           5.0
+Paraguay                  159.0           7.0
+El_Salvador               149.0           6.0
+Guyana                     47.0           6.0
+Haiti                      40.0           3.0
+Nicaragua                  12.0           1.0
 Suriname                   10.0           1.0
 
-El modelo ajustado de 5� es:
-             5            4           3         2
--1.146e-05 x + 0.002361 x - 0.06415 x + 2.807 x - 7.633 x + 9.645
+El modelo ajustado de 6� es:
+             6            5          4         3         2
+-4.446e-05 x + 0.004266 x - 0.1525 x + 2.535 x - 17.21 x + 50.69 x - 21.1
 
-Para el dia 34 se proyectan 3108 casos
-[Finished in 9.041s]
+Para el dia 35 se proyectan 2952 casos
