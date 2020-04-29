@@ -53,11 +53,8 @@ plt.close()
 
 COL = df[df['countriesAndTerritories'] == 'Colombia']
 
-def cases_counter(df):
-    cs = list(df['cases'])[::-1]
-    return cs
+# ###################---> FUNCIONES <---##########################
 
-####################---> FUNCIONES <---##########################
 def acc_list(old):
     new = list()
     acc = 0
@@ -66,9 +63,11 @@ def acc_list(old):
         new.append(acc)
     return new
 
-def cases_counter(df):
-    cs = list(df['cases'])[::-1]
+
+def cases_counter(_data_):
+    cs = list(_data_['cases'])[::-1]
     return cs
+
 
 def PlotPolly(model, independent_variable, dependent_variabble, N):
     x_new = np.linspace(0, N, 100)
@@ -82,8 +81,8 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
-    plt.plot(N, int(New_case), color = 'r', marker = 'x', label = '#Casos Esperados')
-    plt.plot(N, 5597, color = 'g', marker = 'D', label = '#Casos Reales')
+    plt.plot(N, int(New_case), color='r', marker='x', label='#Casos Esperados')
+    plt.plot(N, 5949, color='g', marker='D', label='#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
@@ -95,6 +94,7 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     plt.show()
     plt.close()
 ##################---> FIN FUNCIONES <---########################
+
 
 plt.plot(cases_counter(COL))
 plt.xlabel("Días")
