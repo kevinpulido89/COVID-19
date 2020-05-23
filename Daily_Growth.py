@@ -82,7 +82,7 @@ def PlotPolly(model, independent_variable, dependent_variabble, N):
     plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
     plt.plot(N, int(New_case), color='r', marker='x', label='#Casos Esperados')
-    plt.plot(N, 17687, color='g', marker='D', label='#Casos Reales')
+    plt.plot(N, 19131, color='g', marker='D', label='#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
