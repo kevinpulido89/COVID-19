@@ -1,34 +1,35 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
-Today is 23/05/2020.
+Today is 24/05/2020.
 
                     Total Cases  Total Deaths
 Country
-Brazil                 330890.0       21048.0
-Peru                   111698.0        3244.0
-Mexico                  62527.0        6989.0
-Chile                   61857.0         630.0
-Ecuador                 35828.0        3056.0
-Colombia                19131.0         682.0
-Dominican_Republic      13989.0         456.0
-Argentina               10636.0         433.0
-Panama                  10267.0         295.0
-Bolivia                  5579.0         230.0
-Honduras                 3477.0         167.0
-Guatemala                2743.0          51.0
-Cuba                     1916.0          81.0
-El_Salvador              1725.0          33.0
+Brazil                 347398.0       22013.0
+Peru                   115754.0        3373.0
+Mexico                  65856.0        7179.0
+Chile                   65393.0         673.0
+Ecuador                 36258.0        3096.0
+Colombia                20177.0         705.0
+Dominican_Republic      14422.0         458.0
+Argentina               11340.0         445.0
+Panama                  10577.0         299.0
+Bolivia                  5915.0         240.0
+Honduras                 3743.0         174.0
+Guatemala                3054.0          55.0
+Cuba                     1931.0          81.0
+El_Salvador              1819.0          35.0
 Venezuela                 944.0          10.0
-Costa_Rica                911.0          10.0
-Paraguay                  838.0          11.0
-Haiti                     812.0          25.0
-Uruguay                   753.0          20.0
+Costa_Rica                918.0          10.0
+Haiti                     865.0          26.0
+Paraguay                  850.0          11.0
+Uruguay                   764.0          22.0
 Nicaragua                 279.0          17.0
 Guyana                    127.0          10.0
 Suriname                   11.0           1.0
 
 El modelo ajustado de 5� es:
-             5            4          3         2
--2.542e-05 x + 0.005663 x - 0.3844 x + 12.81 x - 106.3 x + 195.9
+            5            4          3         2
+-2.48e-05 x + 0.005559 x - 0.3783 x + 12.66 x - 105 x + 193.5
 
-Para el dia 74 se proyectan 20128 casos
-[Finished in 32.298s]
+Para el dia 75 se proyectan 21004 casos
+Se estiman 21883 casos ma�ana
+[Finished in 31.461s]

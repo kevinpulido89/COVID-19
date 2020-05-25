@@ -69,17 +69,20 @@ def cases_counter(_data_):
     return cs
 
 
-def PlotPolly(model, independent_variable, dependent_variabble, N):
+def PlotPolly(model, independent_variable, dependent_variable, N):
     x_new = np.linspace(0, N, 100)
     y_new = model(x_new)
 
     New_case = model(N)
 
+    tomorrow = model(N+1)
+
     # Prediccion para el siguente día
-    print(f'Para el dia {len(dependent_variabble)} se proyectan {int(p(len(dependent_variabble)))} casos')
+    print(f'Para el dia {len(dependent_variable)} se proyectan {int(p(len(dependent_variable)))} casos')
+    print(f'Se estiman {int(tomorrow)} casos mañana')
 
     # plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-', label='Avance Casos COL')
-    plt.plot(independent_variable, dependent_variabble, '.', label='Casos confirmados')
+    plt.plot(independent_variable, dependent_variable, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
     plt.plot(N, int(New_case), color='r', marker='x', label='#Casos Esperados')
     plt.plot(N, 21175, color='g', marker='D', label='#Casos Reales')
