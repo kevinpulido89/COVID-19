@@ -1,35 +1,35 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
-Today is 24/05/2020.
+Today is 25/05/2020.
 
                     Total Cases  Total Deaths
 Country
-Brazil                 347398.0       22013.0
-Peru                   115754.0        3373.0
-Mexico                  65856.0        7179.0
-Chile                   65393.0         673.0
-Ecuador                 36258.0        3096.0
-Colombia                20177.0         705.0
+Brazil                 363211.0       22666.0
+Peru                   119959.0        3456.0
+Chile                   69102.0         718.0
+Mexico                  68620.0        7394.0
+Ecuador                 36756.0        3108.0
+Colombia                21175.0         727.0
 Dominican_Republic      14422.0         458.0
-Argentina               11340.0         445.0
-Panama                  10577.0         299.0
-Bolivia                  5915.0         240.0
-Honduras                 3743.0         174.0
-Guatemala                3054.0          55.0
-Cuba                     1931.0          81.0
-El_Salvador              1819.0          35.0
-Venezuela                 944.0          10.0
-Costa_Rica                918.0          10.0
-Haiti                     865.0          26.0
-Paraguay                  850.0          11.0
-Uruguay                   764.0          22.0
+Argentina               12063.0         452.0
+Panama                  10926.0         306.0
+Bolivia                  6263.0         250.0
+Honduras                 3950.0         180.0
+Guatemala                3424.0          58.0
+Cuba                     1941.0          82.0
+El_Salvador              1915.0          35.0
+Venezuela                1121.0          10.0
+Haiti                     958.0          27.0
+Costa_Rica                930.0          10.0
+Paraguay                  862.0          11.0
+Uruguay                   769.0          22.0
 Nicaragua                 279.0          17.0
-Guyana                    127.0          10.0
+Guyana                    135.0          10.0
 Suriname                   11.0           1.0
 
 El modelo ajustado de 5� es:
-            5            4          3         2
--2.48e-05 x + 0.005559 x - 0.3783 x + 12.66 x - 105 x + 193.5
+             5            4          3         2
+-2.278e-05 x + 0.005218 x - 0.3581 x + 12.17 x - 100.5 x + 185.1
 
-Para el dia 75 se proyectan 21004 casos
-Se estiman 21883 casos ma�ana
-[Finished in 31.461s]
+Para el dia 76 se proyectan 21964 casos
+Se estiman 22881 casos ma�ana
+[Finished in 44.232s]
