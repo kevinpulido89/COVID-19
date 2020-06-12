@@ -1,34 +1,35 @@
 [Command: python -u 'C:\Users\Kevin Pulido\github\COVID-19\Daily_Growth.py']
-Today is 04/06/2020.
+Today is 11/06/2020.
 
                     Total Cases  Total Deaths
 Country
-Brazil                 584016.0       32548.0
-Peru                   178914.0        4894.0
-Chile                  113628.0        1275.0
-Mexico                 101238.0       11728.0
-Ecuador                 40966.0        3486.0
-Colombia                33354.0        1045.0
-Argentina               19255.0         583.0
-Dominican_Republic      18040.0         516.0
-Panama                  14609.0         357.0
-Bolivia                 11638.0         400.0
-Guatemala                5760.0         143.0
-Honduras                 5690.0         234.0
-El_Salvador              2705.0          51.0
-Haiti                    2640.0          50.0
-Cuba                     2107.0          83.0
-Venezuela                1952.0          20.0
-Costa_Rica               1157.0          10.0
-Nicaragua                1118.0          46.0
-Paraguay                 1070.0          11.0
-Uruguay                   828.0          23.0
-Guyana                    153.0          12.0
-Suriname                   74.0           1.0
+Brazil                 772416.0       39680.0
+Peru                   208823.0        5903.0
+Chile                  148496.0        2475.0
+Mexico                 129184.0       15357.0
+Ecuador                 44440.0        3720.0
+Colombia                43682.0        1433.0
+Argentina               25987.0         735.0
+Dominican_Republic      20808.0         550.0
+Panama                  17889.0         413.0
+Bolivia                 15281.0         512.0
+Guatemala                8221.0         316.0
+Honduras                 7360.0         290.0
+Haiti                    3796.0          58.0
+El_Salvador              3274.0          64.0
+Venezuela                2738.0          23.0
+Cuba                     2211.0          83.0
+Nicaragua                1464.0          55.0
+Costa_Rica               1461.0          12.0
+Paraguay                 1202.0          11.0
+Uruguay                   847.0          23.0
+Guyana                    156.0          12.0
+Suriname                  137.0           2.0
 
 El modelo ajustado de 5� es:
-             5            4          3         2
--1.343e-06 x + 0.001336 x - 0.1114 x + 5.683 x - 37.68 x + 56.7
+             5            4          3        2
+-9.066e-06 x + 0.002942 x - 0.2284 x + 9.21 x - 76.89 x + 149.5
 
-Para el dia 86 se proyectan 34739 casos
-Se estiman 36266 casos ma�ana
+Para el dia 93 se proyectan 45891 casos
+Se estiman 47699 casos ma�ana
+[Finished in 65.023s]
