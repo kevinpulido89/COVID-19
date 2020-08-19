@@ -85,7 +85,7 @@ def PlotPolly(model, independent_variable, dependent_variable, N):
     plt.plot(independent_variable, dependent_variable, '.', label='Casos confirmados')
     plt.plot(x_new, y_new, '-', label='Proyección Casos COL')
     plt.plot(N, int(New_case), color='r', marker='x', label='#Casos Esperados')
-    plt.plot(N, 159898, color='g', marker='D', label='#Casos Reales')
+    plt.plot(N, 489122, color='g', marker='D', label='#Casos Reales')
     plt.title('Crecimiento de casos de COVID-19 en Colombia.')
     ax = plt.gca()
     ax.set_facecolor((0.892, 0.892, 0.892))
@@ -117,7 +117,7 @@ for i in range(len(acc)-window_size):
     acc_col = acc_col.append(pd.DataFrame(K).T)
 
 # Here we use a polynomial of the 5th order
-order = 5
+order = 6
 f = np.polyfit(yy, acc, order)
 # print('f: ',f)
 p = np.poly1d(f)
